@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from dataclasses import dataclass
 
+
 @dataclass
 class App:
 
@@ -9,9 +10,6 @@ class App:
 
     @property
     def app(self):
-        app = FastAPI(title='Crypto Helper')
+        app = FastAPI(title="Crypto Helper")
         self.setup(app)
         return app
-
-
-

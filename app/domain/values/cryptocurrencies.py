@@ -1,6 +1,7 @@
 from app.domain.values.base import ValueObject
 from dataclasses import dataclass
 
+
 @dataclass
 class CryptoAbbreviation[str](ValueObject):
     value: str

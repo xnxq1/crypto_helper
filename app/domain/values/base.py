@@ -11,8 +11,7 @@ class ValueObject[T](abc.ABC):
         self.validate()
 
     @abstractmethod
-    def validate(self) -> None:
-        ...
+    def validate(self) -> None: ...
 
     def to_raw(self) -> T:
         return self.value
