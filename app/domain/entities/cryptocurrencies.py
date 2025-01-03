@@ -9,5 +9,5 @@ class CryptoPair:
     second_crypto: CryptoAbbreviation
     price: float
 
-    def to_raw(self) -> str:
+    def __str__(self) -> str:
         return self.first_crypto.to_raw() + "/" + self.second_crypto.to_raw()

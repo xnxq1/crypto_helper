@@ -2,12 +2,13 @@ from functools import lru_cache
 
 from punq import Container
 
-from app.application.app import App
+
+from app.config import Config
 
 
 @lru_cache(1)
-def create_di():
+def init_container():
     container = Container()
-    container.register(App, App)
+    container.register(Config, instance=Config())
 
     return container
