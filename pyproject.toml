@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "crypto-helper"
+version = "0.1.0"
+description = ""
+authors = ["xnxq1 <xnxq1@mail.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+make = "^0.1.6.post2"
+black = "^24.10.0"
+flake8 = "^7.1.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
