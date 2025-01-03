@@ -12,7 +12,7 @@ lint-check: black-check flake8-check
 lint-build: black-lint flake8-check
 
 tests:
-	pytest ddd/tests
+	pytest app/tests
 
 main:
 	docker-compose -f dev.yaml up --build

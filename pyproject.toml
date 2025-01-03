@@ -10,6 +10,11 @@ python = "^3.12"
 make = "^0.1.6.post2"
 black = "^24.10.0"
 flake8 = "^7.1.1"
+pytest = "^8.3.4"
+ccxt = "^4.4.44"
+fastapi = "^0.115.6"
+uvicorn = "^0.34.0"
+punq = "^0.7.0"
 
 
 [build-system]
