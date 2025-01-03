@@ -1,20 +1,28 @@
-
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
-from telegram.ext import Updater, CommandHandler, CallbackQueryHandler, CallbackContext, Application
+from telegram.ext import (
+    CommandHandler,
+    CallbackQueryHandler,
+    CallbackContext,
+    Application,
+)
 
 from app.config import Config
 from app.di import init_container
+
+
 async def start(update: Update, context: CallbackContext):
-    keyboard = [
-        [InlineKeyboardButton("Нажми меня", callback_data='button_pressed')]
-    ]
+    keyboard = [[InlineKeyboardButton("Нажми меня", callback_data="button_pressed")]]
     reply_markup = InlineKeyboardMarkup(keyboard)
-    await update.message.reply_text('Привет! Нажми кнопку ниже:', reply_markup=reply_markup)
+    await update.message.reply_text(
+        "Привет! Нажми кнопку ниже:", reply_markup=reply_markup
+    )
+
 
 async def button(update: Update, context: CallbackContext):
     query = update.callback_query
     await query.answer()
     await query.edit_message_text(text="Кнопка была нажата!")
+
 
 def main() -> None:
     container = init_container()
